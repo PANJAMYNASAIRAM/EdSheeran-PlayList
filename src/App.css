@@ -1,38 +1,143 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Main App Container */
+.app-container {
   min-height: 100vh;
+  background-color: #152850;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+}
+
+/* Header Section */
+.header-section {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/music-playlist/music-playlist-Edsheeran-bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+}
+
+.header-section h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.header-section p {
+  margin-top: 8px;
+  font-size: 18px;
+  color: #cbd5e1;
+}
+
+/* Playlist Section */
+.playlist-section {
+  padding: 20px 40px;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 6px 10px;
+  width: 300px;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.search-container input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  flex-grow: 1;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-container input::placeholder {
+  color: #cbd5e1;
 }
+
+/* Tracks List */
+.tracks-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each Track Item */
+.track-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* Left Side Track Info */
+.track-info {
+  display: flex;
+  align-items: center;
+}
+
+.track-info img {
+  width: 120px;
+  height: 80px;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.track-info p {
+  margin: 4px 0;
+}
+
+.track-info p:first-child {
+  font-weight: 500;
+}
+
+.track-info p:last-child {
+  color: #3b82f6;
+  font-size: 14px;
+}
+
+/* Right Section */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-section p {
+  color: #cbd5e1;
+  margin: 0;
+}
+
+/* Delete Button */
+.right-section button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+/* No Songs Found */
+.no-songs {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
