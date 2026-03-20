@@ -1,3 +1,156 @@
+
+##Project Description
+
+The Music Playlist App is a simple and interactive React application that displays a list of songs by Ed Sheeran. Users can search for songs using a search bar and delete tracks from the playlist dynamically. The app updates in real-time based on user actions, providing a smooth and responsive experience. 
+
+##Features
+
+🔍 Search Functionality
+Filter songs instantly based on user input.
+
+🗑 Delete Songs
+Remove any track from the playlist with a single click.
+
+📃 Dynamic Rendering
+UI updates automatically when songs are searched or deleted.
+
+🚫 No Songs Found State
+Displays a message when no matching songs are found.
+
+🎨 Responsive UI
+Clean and user-friendly interface.
+
+#Technologies Used
+
+⚛️ React JS – For building UI components
+
+🎨 CSS – For styling and layout
+
+🧠 JavaScript (ES6) – Logic and state management
+
+🔗 react-icons – For search and delete icons 
+
+##Installation Steps
+
+1. Clone the repository git clone https://github.com/PANJAMYNASAIRAM/EdSheeran-PlayList.git
+2. Go to project folder "cd EdSheeran-PlayList"
+3. Install dependencies "npm install"
+4. Start the project "npm start"
+
+##Live Demo
+
+https://PANJAMYNASAIRAM.github.io/EdSheeran-PlayList
+
+
+##⚙️ How It Works
+1. Initial Data Setup
+
+You start with a list of songs (initialTracksList) of Ed Sheeran
+
+This data contains:
+
+Song name
+
+Image
+
+Genre
+
+Duration
+
+2. State Management (Brain of the App)
+
+You use React’s state:
+
+const [tracksList, setTracksList] = useState(initialTracksList)
+const [searchInput, setSearchInput] = useState('')
+👉 What these do:
+
+tracksList → stores current songs
+
+searchInput → stores what user types
+
+3. Searching Songs 🔍
+
+When user types in search box:
+
+const onChangeSearch = event => {
+  setSearchInput(event.target.value)
+}
+
+Then filtering happens:
+
+const filteredTracks = tracksList.filter(each =>
+  each.name.toLowerCase().includes(searchInput.toLowerCase()),
+)
+👉 Result:
+
+Only matching songs are shown
+
+Search is case-insensitive
+
+4. Deleting a Song 🗑
+
+When delete button is clicked:
+
+const onDeleteTrack = id => {
+  const filteredList = tracksList.filter(each => each.id !== id)
+  setTracksList(filteredList)
+}
+👉 What happens:
+
+Selected song is removed
+
+UI updates instantly
+
+5. Conditional Rendering 🚫
+const showNoSongs =
+  (searchInput !== '' && filteredTracks.length === 0) ||
+  tracksList.length === 0
+👉 Logic:
+
+If no songs match search OR all songs deleted
+➡️ Show "No Songs Found"
+
+6. Displaying Songs 📃
+filteredTracks.map(each => (
+  <li key={each.id}>
+👉 What happens:
+
+Each song is rendered as a list item
+
+Shows:
+
+Image
+
+Name
+
+Genre
+
+Duration
+
+Delete button
+
+🎯 Final Flow
+
+App loads → shows all songs
+
+User types → list filters instantly
+
+User deletes → song removed
+
+No matches → shows message
+
+🧠 In Simple Words
+
+👉 It’s a dynamic list app where:
+
+Data is stored in state
+
+UI updates automatically
+
+User controls everything (search + delete)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
