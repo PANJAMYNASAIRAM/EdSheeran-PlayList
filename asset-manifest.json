@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/EdSheeran-PlayList/static/css/main.89b3ec49.css",
+    "main.js": "/EdSheeran-PlayList/static/js/main.152c3de4.js",
+    "static/js/453.ede90e6d.chunk.js": "/EdSheeran-PlayList/static/js/453.ede90e6d.chunk.js",
+    "index.html": "/EdSheeran-PlayList/index.html",
+    "main.89b3ec49.css.map": "/EdSheeran-PlayList/static/css/main.89b3ec49.css.map",
+    "main.152c3de4.js.map": "/EdSheeran-PlayList/static/js/main.152c3de4.js.map",
+    "453.ede90e6d.chunk.js.map": "/EdSheeran-PlayList/static/js/453.ede90e6d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89b3ec49.css",
+    "static/js/main.152c3de4.js"
+  ]
+}
